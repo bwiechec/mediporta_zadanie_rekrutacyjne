@@ -27,18 +27,20 @@ export const Pagination = ({
   };
 
   return (
-    <Stack direction="row" alignItems={"center"}>
-      {currentPage > 1 && (
-        <IconButton onClick={handlePageDownChange}>
-          <NavigateBeforeIcon />
-        </IconButton>
-      )}
-      <Typography px={2}>{currentPage}</Typography>
-      {hasMore && (
-        <IconButton onClick={handlePageUpChange}>
-          <NavigateNextIcon />
-        </IconButton>
-      )}
+    <Stack direction="row" alignItems={"center"} justifyContent="center">
+      <IconButton
+        onClick={handlePageDownChange}
+        sx={{ visibility: currentPage <= 1 ? "hidden" : "visible" }}
+      >
+        <NavigateBeforeIcon />
+      </IconButton>
+      <Typography>{currentPage}</Typography>
+      <IconButton
+        onClick={handlePageUpChange}
+        sx={{ visibility: !hasMore ? "hidden" : "visible" }}
+      >
+        <NavigateNextIcon />
+      </IconButton>
     </Stack>
   );
 };

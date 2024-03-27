@@ -1,5 +1,10 @@
-import { useState } from "react";
-import { QueryParam } from "../utils/types";
+import React, { createContext, useContext, useState } from "react";
+import { QueryParam } from "../../utils/types";
+
+interface ThreadContextProps {
+  queryParams: QueryParam[];
+  handleSetQueryParams: (params: QueryParam[]) => void;
+}
 
 const availableParams = ["page", "pagesize", "order", "sort"];
 
@@ -17,7 +22,23 @@ const parseParams = () => {
   return queryParams;
 };
 
-export const useQueryParams = () => {
+const QueryParamsContext = createContext<ThreadContextProps | undefined>(
+  undefined
+);
+
+export const useQueryParams = (): ThreadContextProps => {
+  const queryParams = useContext(QueryParamsContext);
+  if (!queryParams) {
+    throw new Error("useQueryParams must be used within a QueryParamsProvider");
+  }
+  return queryParams;
+};
+
+interface QueryParamsProviderProps {
+  children: React.ReactNode;
+}
+
+export const QueryParamsProvider = ({ children }: QueryParamsProviderProps) => {
   const [queryParams, setQueryParams] = useState<QueryParam[]>(parseParams());
 
   const handleSetQueryParams = (params: QueryParam[]) => {
@@ -37,5 +58,9 @@ export const useQueryParams = () => {
     setQueryParams(parseParams());
   };
 
-  return { queryParams, handleSetQueryParams };
+  return (
+    <QueryParamsContext.Provider value={{ queryParams, handleSetQueryParams }}>
+      {children}
+    </QueryParamsContext.Provider>
+  );
 };
