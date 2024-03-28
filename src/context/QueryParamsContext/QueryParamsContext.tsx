@@ -22,7 +22,7 @@ const parseParams = () => {
   return queryParams;
 };
 
-const QueryParamsContext = createContext<ThreadContextProps | undefined>(
+export const QueryParamsContext = createContext<ThreadContextProps | undefined>(
   undefined
 );
 

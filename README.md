@@ -1,45 +1,54 @@
-# <Your-Project-Title>
-
-## Description
-
-https://github.com/AntonioFalcaoJr/EventualShop#toolbox-tech-stack
-
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+# Recruitment task
 
 ## Table of Contents
 
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [Features](#features)
+
+## Description
+
+The goal of the task was to implement React app using stackexchange API endpoint. Endpoint returns StackOverflow tags.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To install the app run
+
+```
+npm ci
+```
+
+To start the app run
+
+```
+npm start
+```
+
+To run Storybook use
+
+```
+npm run storybook
+```
+
+To run tests use
+
+```
+npm test
+```
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+|                                                                                     |                                                                                                       |
+| :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+|                   _1. Home page_ ![home page](docs/home-page.png)                   |                 _2. Loading tag(s)_ ![loading product(s)](docs/loading-next-page.png)                 |
+|     _3. Diffrent page size_ ![diffrent page size](docs/diffrent-page-size.png)      |           _4. No tags found info with error shown_ ![no-tags-found](docs/no-tags-found.png)           |
+| _5. Example error message_ ![example-error-message](docs/example-error-message.png) | _6. loading after no tags found_ ![loading-after-no-tags-found](docs/loading-after-no-tags-found.png) |
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Fetching data from API endpoint
+- Switch between diffrent items per page numbers
+- Go through tag pages using pagination
+- Sort data clicking on column name
+- Storing sort column, sort order, page size and current page in URL

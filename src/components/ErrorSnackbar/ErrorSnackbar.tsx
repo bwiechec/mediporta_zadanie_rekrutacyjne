@@ -1,7 +1,7 @@
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
-interface ErrorSnackbarProps {
+export interface ErrorSnackbarProps {
   open: boolean;
   message: string;
   onClose: () => void;

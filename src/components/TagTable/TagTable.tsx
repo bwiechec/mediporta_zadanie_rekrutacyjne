@@ -15,7 +15,7 @@ export const TagTable = ({ isPreviousData }: TagTableProps) => {
       component={Paper}
       sx={{ maxWidth: "1280px", position: "relative", minWidth: "70%" }}
     >
-      <Table>
+      <Table data-testid="tag-table">
         <TagHead />
         <TagBody />
       </Table>
