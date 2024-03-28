@@ -39,11 +39,11 @@ npm test
 
 ## Usage
 
-|                                                                                     |                                                                                                       |
-| :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
-|                   _1. Home page_ ![home page](docs/home-page.png)                   |                 _2. Loading tag(s)_ ![loading product(s)](docs/loading-next-page.png)                 |
-|     _3. Diffrent page size_ ![diffrent page size](docs/diffrent-page-size.png)      |           _4. No tags found info with error shown_ ![no-tags-found](docs/no-tags-found.png)           |
-| _5. Example error message_ ![example-error-message](docs/example-error-message.png) | _6. loading after no tags found_ ![loading-after-no-tags-found](docs/loading-after-no-tags-found.png) |
+|                                                                                                       |                                                                                   |
+| :---------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+|                            _1. Home page_ ![home page](docs/home-page.png)                            |       _2. Loading tag(s)_ ![loading product(s)](docs/loading-next-page.png)       |
+|              _3. Diffrent page size_ ![diffrent page size](docs/diffrent-page-size.png)               | _4. No tags found info with error shown_ ![no-tags-found](docs/no-tags-found.png) |
+| _5. loading after no tags found_ ![loading-after-no-tags-found](docs/loading-after-no-tags-found.png) |
 
 ## Features
 
